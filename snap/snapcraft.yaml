@@ -8,7 +8,7 @@ confinement: strict # use 'strict' once you have the right plugs
 
 apps:
   lector:
-    command: lector
+    command: lector/__main__.py
     plugs:
       - home
            
