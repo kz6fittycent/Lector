@@ -19,7 +19,6 @@ parts:
     plugin: python3
     after: [desktop-qt5]
     build-packages:
-      - python3
       - pyqt5-dev
       - python-requests
       - python-beautifulsoup
@@ -27,7 +26,6 @@ parts:
       - python3-poppler-qt5
       
     stage-packages:
-      - python3
       - pyqt5-dev
       - python-requests
       - python-beautifulsoup
