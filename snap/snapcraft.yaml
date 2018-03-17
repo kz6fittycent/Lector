@@ -1,0 +1,35 @@
+name: lector # check to see if it's available
+version: '1.0+git' # this is freakin' awesome
+summary: Qt based ebook reader # 79 char long summary
+description: |
+  Enjoy reading your favorite eBooks with Lector!
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs
+
+apps:
+  lector:
+    command: lector
+    plugs:
+      - home
+           
+parts: 
+  my-part:
+    source: https://github.com/kz6fittycent/Lector
+    source-type: git
+    plugin: python3
+    after: [desktop-qt5]
+    build-packages:
+      - python3
+      - pyqt5-dev
+      - python-requests
+      - python-beautifulsoup
+      - libpoppler-qt5-1
+      - python3-poppler-qt5
+      
+    stage-packages:
+      - python3
+      - pyqt5-dev
+      - python-requests
+      - python-beautifulsoup
+      - libpoppler-qt5-1
+      - python3-poppler-qt5
